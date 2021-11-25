@@ -1,4 +1,3 @@
-
 <?php
 	if (isset($_GET['id']))
 	{
@@ -13,70 +12,76 @@
 	$title=$row_title['category_name']
 ?>
 <style>
-	.product-men{
-		margin-bottom: 10px;
-	}
+.product-men {
+    margin-bottom: 10px;
+}
 </style>
 <div class="ads-grid py-sm-5 py-4">
-		<div class="container py-xl-4 py-lg-2">
-			<!-- tittle heading -->
-			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3"><?php echo $title?></h3>
-			<!-- //tittle heading -->
-			<div class="row">
-				
-				<!-- product left -->
-				<div class="agileinfo-ads-display col-lg-9">
-					<div class="wrapper">
-						
-						<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
-							<div class="row">
-								<?php
+    <div class="container py-xl-4 py-lg-2">
+        <!-- tittle heading -->
+        <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3"><?php echo $title?></h3>
+        <!-- //tittle heading -->
+        <div class="row">
+
+            <!-- product left -->
+            <div class="agileinfo-ads-display col-lg-9">
+                <div class="wrapper">
+
+                    <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
+                        <div class="row">
+                            <?php
 								while($row_cate=mysqli_fetch_array($sql_cate)){ 
 								?>
-								<div class="col-md-4 product-men">
-									<div class="men-pro-item simpleCart_shelfItem">
-										<div class="men-thumb-item text-center">
-											<img style="<?php if($row_sanpham['category_id']==4){
+                            <div class="col-md-4 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item text-center">
+                                        <img style="<?php if($row_sanpham['category_id']==4){
 												echo "width: 127px;height:159px";
 												
 											}else{
 												echo "width: 100%;height:159px";
 												
 											}
-											  ?>"  src="images/<?php echo $row_cate['sanpham_image'] ?>" alt="">
-											<div class="men-cart-pro">
-												<div class="inner-men-cart-pro">
-													<a href="?quanly=chitietsp&id=<?php echo $row_cate['sanpham_id'] ?>" class="link-product-add-cart">Xem sản phẩm</a>
-												</div>
-											</div>
-										</div>
-										<div class="item-info-product text-center border-top mt-4">
-											<h4 class="pt-1">
-												<a href="?quanly=chitietsp&id=<?php echo $row_cate['sanpham_id'] ?>"><?php echo $row_cate['sanpham_name'] ?></a>
-											</h4>
-											<div class="info-product-price my-2">
-												<span class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ." vnd" ?></span>
-												<del><?php echo number_format($row_cate['sanpham_gia']) ." vnd" ?></del>
-											</div>
-											<input id="themmon_ngon"  id_mon=<?php echo $row_cate['sanpham_id'] ?> type="button" name="themgiohang" value="<?php if($row_cate['sanpham_soluong']>0){echo "Add to cart";}else{echo "Sold out";} ?>" class="btn <?php if($row_cate['sanpham_soluong']>0){echo "btn-success";}else{echo "btn-primary";} ?>" >
+											  ?>" src="images/products/<?php echo $row_cate['sanpham_image'] ?>" alt="">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="?quanly=chitietsp&id=<?php echo $row_cate['sanpham_id'] ?>"
+                                                    class="link-product-add-cart">Xem sản phẩm</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item-info-product text-center border-top mt-4">
+                                        <h4 class="pt-1">
+                                            <a
+                                                href="?quanly=chitietsp&id=<?php echo $row_cate['sanpham_id'] ?>"><?php echo $row_cate['sanpham_name'] ?></a>
+                                        </h4>
+                                        <div class="info-product-price my-2">
+                                            <span
+                                                class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ." vnd" ?></span>
+                                            <del><?php echo number_format($row_cate['sanpham_gia']) ." vnd" ?></del>
+                                        </div>
+                                        <input id="themmon_ngon" id_mon=<?php echo $row_cate['sanpham_id'] ?>
+                                            type="button" name="themgiohang"
+                                            value="<?php if($row_cate['sanpham_soluong']>0){echo "Add to cart";}else{echo "Sold out";} ?>"
+                                            class="btn <?php if($row_cate['sanpham_soluong']>0){echo "btn-success";}else{echo "btn-primary";} ?>">
 
-										</div>
-									</div>
-								</div>
-								<?php
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
 								}
 								?>
-							</div>
-						</div>
-						
-						
-					</div>
-				</div>
-				<?php
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <?php
 				include('product_right.php');
 				?>
-			
-				<!-- <div class="col-lg-3 mt-lg-0 mt-4 p-lg-0">
+
+            <!-- <div class="col-lg-3 mt-lg-0 mt-4 p-lg-0">
 					<div class="side-bar p-sm-4 p-3">
 						<div class="search-hotel border-bottom py-2">
 							<h3 class="agileits-sear-head mb-3">Brand</h3>
@@ -283,10 +288,10 @@
 					</div>
 					
 				</div> -->
-			</div>
-		</div>
-	</div>
-	<?php
+        </div>
+    </div>
+</div>
+<?php
 	if(isset($_GET['quanly']))
 	{
 		
@@ -298,9 +303,7 @@
 	
 	}
 	else{include('mini-cart.php');}?>
-	
-	<!-- //popup modal (for location)-->
-	
-	<!-- cart-js -->
-	
-	
+
+<!-- //popup modal (for location)-->
+
+<!-- cart-js -->

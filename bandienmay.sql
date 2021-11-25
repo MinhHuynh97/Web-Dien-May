@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2021 at 07:29 AM
+-- Generation Time: Nov 25, 2021 at 02:42 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -191,7 +191,8 @@ CREATE TABLE `tbl_giohang` (
 INSERT INTO `tbl_giohang` (`giohang_id`, `tensanpham`, `sanpham_id`, `giasanpham`, `hinhanh`, `soluong`) VALUES
 (59, 'Tivi LG', 20, '9000000', 'tivi_lg.jpg', 3),
 (60, 'Microwave Oven', 34, '300', 'm9.jpg', 2),
-(61, 'Máy giặt Panasonic', 5, '7000000', 'm8.jpg', 1);
+(61, 'Máy giặt Panasonic', 5, '7000000', 'm8.jpg', 1),
+(62, 'YangZing NanoFluton', 41, '200', 'cam5.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -245,23 +246,36 @@ CREATE TABLE `tbl_sanpham` (
 --
 
 INSERT INTO `tbl_sanpham` (`sanpham_id`, `category_id`, `sanpham_name`, `sanpham_chitiet`, `sanpham_mota`, `sanpham_gia`, `sp_khuyenmai`, `sanpham_active`, `sanpham_hot`, `sanpham_soluong`, `sanpham_image`) VALUES
-(5, 3, 'Máy giặt Panasonic', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem', '7000000', '5900000', 1, 1, 10, 'm8.jpg'),
-(16, 4, 'Điện thoại LG', 'Bền', 'Đẹp', '9000000', '8500000', 0, 0, 12, 'dienthoai_lg.jpg'),
-(21, 4, 'Samsung Galaxy J7', 'dep', 'dep', '6000000', '5600000', 0, 0, 12, 'm1.jpg'),
-(22, 4, 'OPPO A37f', 'dep', 'dep', '6500000', '6000000', 0, 0, 23, 'm2.jpg'),
-(23, 4, 'Infinix Hot S3', 'dep', 'dep', '300', '290', 0, 0, 12, 'mk1.jpg'),
-(24, 4, 'Moto X4 (6 GB)', 'dep', 'dep', '240', '233', 0, 0, 32, 'mk2.jpg'),
-(25, 4, 'iVooMi i Series', 'dep', 'dep', '260', '249', 0, 0, 12, 'mk3.jpg'),
-(26, 13, 'Dell Vostro Laptop', 'dep', 'dep', '260', '252', 0, 0, 3, 'mk4.jpg'),
-(27, 13, 'Acer Laptop', 'dep', 'dep', '260', '240', 0, 0, 5, 'mk5.jpg'),
-(28, 13, 'Lenovo ', 'dep', 'dep', '320', '300', 0, 0, 7, 'mk6.jpg'),
-(29, 5, 'Sony 80 cm (32 inches)', 'dep', 'dep', '340', '320', 0, 0, 4, 'm4.jpg'),
-(30, 5, 'Artis Speaker', 'dep', 'dep', '399', '349', 0, 0, 2, 'm5.jpg'),
-(31, 5, 'Philips Speakers', 'dep', 'dep', '300', '249', 0, 0, 4, 'm6.jpg'),
-(34, 5, 'Microwave Oven', 'dep', 'dep', '300', '280', 0, 0, 4, 'm9.jpg'),
-(35, 5, 'Boat Rockerz Headset', 'dep', 'dep', '320', '350', 0, 0, 2, 'mm1.jpg'),
-(36, 5, 'LG Boom Blast Speaker', 'dep', 'dep', '200', '180', 0, 0, 5, 'mm2.jpg'),
-(37, 14, 'Nikon Camera', 'dep', 'dep', '230', '200', 0, 0, 5, 'mm3.jpg');
+(16, 4, 'Điện thoại LG', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '9000000', '8500000', 1, 0, 12, 'phone1.jpg'),
+(21, 4, 'Samsung Galaxy J7', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '6000000', '5600000', 1, 0, 12, 'phone2.jpg'),
+(22, 4, 'OPPO A37f', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '6500000', '6000000', 1, 0, 23, 'phone3.jpg'),
+(23, 4, 'Infinix Hot S3', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '300', '290', 1, 0, 12, 'phone4.jpg'),
+(24, 4, 'Moto X4 (6 GB)', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '240', '233', 1, 0, 32, 'phone5.jpg'),
+(25, 4, 'iVooMi i Series', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '249', 1, 0, 12, 'phone6.jpg'),
+(26, 13, 'Dell Vostro Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '252', 1, 0, 3, 'lap1.jpg'),
+(27, 13, 'Acer Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '240', 1, 0, 5, 'lap2.jpg'),
+(28, 13, 'Lenovo ', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '320', '300', 1, 0, 7, 'lap3.jpg'),
+(29, 5, 'Sony 80 cm (32 inches)', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '340', '320', 1, 0, 4, 'tv1.jpg'),
+(30, 5, 'Artis Speaker', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '399', '349', 1, 0, 2, 'tv2.jpg'),
+(31, 5, 'Philips Speakers', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '300', '249', 1, 0, 4, 'tv3.jpg'),
+(34, 5, 'Microwave Oven', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '300', '280', 1, 0, 4, 'tv4.jpg'),
+(35, 5, 'Boat Rockerz Headset', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '320', '350', 1, 0, 2, 'tv5.jpg'),
+(36, 5, 'LG Boom Blast Speaker', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '200', '180', 1, 0, 5, 'tv6.jpg'),
+(37, 14, 'Nikon Camera', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam1.jpg'),
+(38, 14, 'Canon Knight V', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam2.jpg'),
+(39, 14, 'Fujikama X8 Pro', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam3.jpg'),
+(40, 14, 'Canon Flash R759', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam4.jpg'),
+(41, 14, 'YangZing NanoFluton', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam5.jpg'),
+(42, 14, 'Yokozakj M2 Black', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam6.jpg'),
+(43, 13, 'Dell Vostro Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '252', 1, 0, 3, 'lap4.jpg'),
+(44, 13, 'Acer Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '240', 1, 0, 5, 'lap5.jpg'),
+(45, 13, 'Lenovo ', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '320', '300', 1, 0, 7, 'lap6.jpg'),
+(46, 3, 'Máy giặt Panasonic', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm2.jpg'),
+(47, 3, 'Máy giặt Samsung', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm3.jpg'),
+(48, 3, 'Máy giặt LG', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm4.jpg'),
+(49, 3, 'Máy giặt AQUA', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm1.jpg'),
+(50, 3, 'Máy giặt Electronux', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm5.jpg'),
+(51, 3, 'Máy giặt Panasonic', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm6.jpg');
 
 -- --------------------------------------------------------
 
@@ -281,8 +295,10 @@ CREATE TABLE `tbl_slider` (
 --
 
 INSERT INTO `tbl_slider` (`slider_id`, `slider_image`, `slider_caption`, `slider_active`) VALUES
-(1, 'bg.jpg', 'slider khuyến mãi', 1),
-(2, 'a4.jpg', 'slider 50%', 1);
+(1, 'b1.png', 'slider khuyến mãi', 1),
+(2, 'b2.png', 'slider 50%', 1),
+(3, 'b3.png', '', 1),
+(4, 'b4.png', '', 1);
 
 -- --------------------------------------------------------
 
@@ -416,7 +432,7 @@ ALTER TABLE `tbl_giaodich`
 -- AUTO_INCREMENT for table `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
-  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `tbl_khachhang`
@@ -428,13 +444,13 @@ ALTER TABLE `tbl_khachhang`
 -- AUTO_INCREMENT for table `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
-  MODIFY `sanpham_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `sanpham_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `tbl_slider`
 --
 ALTER TABLE `tbl_slider`
-  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_views`
