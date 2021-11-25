@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost
--- Thời gian đã tạo: Th10 23, 2021 lúc 09:55 AM
--- Phiên bản máy phục vụ: 10.4.8-MariaDB
--- Phiên bản PHP: 7.3.11
+-- Host: 127.0.0.1
+-- Generation Time: Nov 25, 2021 at 07:29 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `bandienmay`
+-- Database: `bandienmay`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_admin`
+-- Table structure for table `tbl_admin`
 --
 
 CREATE TABLE `tbl_admin` (
@@ -36,16 +35,18 @@ CREATE TABLE `tbl_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_admin`
+-- Dumping data for table `tbl_admin`
 --
 
 INSERT INTO `tbl_admin` (`admin_id`, `admin_name`, `email`, `password`) VALUES
-(2, 'Minh', 'minh@123', '202cb962ac59075b964b07152d234b70');
+(2, 'Minh', 'minh@123', '202cb962ac59075b964b07152d234b70'),
+(5, 'thanh', 'thanh@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
+(7, 'admin\r\n', 'thanh@123', 'e10adc3949ba59abbe56e057f20f883e');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_baiviet`
+-- Table structure for table `tbl_baiviet`
 --
 
 CREATE TABLE `tbl_baiviet` (
@@ -58,17 +59,23 @@ CREATE TABLE `tbl_baiviet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_baiviet`
+-- Dumping data for table `tbl_baiviet`
 --
 
 INSERT INTO `tbl_baiviet` (`baiviet_id`, `danhmuc_id`, `baiviet_image`, `tenbaiviet`, `tomtat`, `noidung`) VALUES
-(5, 3, 'a4.jpg', 'Bài 1', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'),
-(9, 2, 'ab.jpg', 'Bài 3', 'Kiến thức máy vi tính,laptop', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.');
+(1, 3, 'phone1.jpg', 'Ra mắt GALAXY S21 FE', 'Trên trang Twitter cá nhân, Jon Prosser đã tiết lộ thời gian diễn ra sự kiện Unpacked. Sản phẩm sẽ ra mắt trong sự kiện lần này chính là Galaxy S21 FE sẽ được tổ chức vào ngày 4/1/2022.', 'Bên cạnh đó, Samsung sẽ trang bị cho Galaxy S21 FE viên pin lên đến 4.370 mAh và có sạc nhanh 25 W giúp nâng cao trải nghiệm người dùng. Mặt trước của thiết bị được cho là có camera selfie 32 MP, còn mặt sau có ba camera: Chính 32 MP + góc siêu rộng 12 MP + tele 8 MP.\r\n\r\nGalaxy S21 FE dự kiến ​​sở hữu màn hình AMOLED Infinity-O Full HD+ 6.4 inch, hỗ trợ tốc độ làm tươi 120 Hz, dùng chip Snapdragon 888 hoặc Exynos 2100 (tùy thuộc vào thị trường).\r\n\r\nBạn dự đoán Galaxy S21 FE sẽ có giá bán bao nhiêu?'),
+(2, 3, 'phone2.jpg', 'Đánh giá Điện thoại Xiaomi 11T 5G', 'Điện thoại Xiaomi 11T 5G – cao cấp nhưng ZenBook UX325 có màn hình OLED tân tiến. Đi kèm với nó là độ phân giải FullHD nhưng đừng vì vậy mà nghĩ rằng nó chưa đủ “tầm” để sánh với màn hình cao cấp.', 'Mẫu Ultrabook này được ASUS đầu tư khá hoàn hảo. Sản phẩm được trang bị con chip Intel Core i5 cùng card đồ hoạ Intel Iris XE, RAM 8GB RAM LPDDR4x bus 4266 MHz chạy Dual Channel và bộ nhớ SSD 512GB m.2 NVMe. Các thông số này tuy không phải đỉnh nhất nhưng lại rất hài hòa khi kết hợp cùng nhau, cho hiệu năng phục vụ tốt các nhu cầu từ giải trí đến làm việc.\r\n\r\nĐặc biệt là card đồ hoạ Intel Iris XE G7 mạnh gấp 3 lần nếu đặt lên bàn cân so sánh với Intel Ultra HD620 đời cũ. Dung lượng pin laptop là 67Wh. '),
+(3, 3, 'phone3.jpg', 'Ra mắt OPPO RENO7 SERIES', 'Dòng điện thoại được tiết lộ sẽ có 4 phiên bản màu sắc. Dựa trên hình ảnh được leaker chia sẻ có thể thấy khung viền của thiết bị được làm phẳng với bốn góc máy bo cong, còn cụm camera sau nhìn khác biệt hẳn so với dòng Reno6.', 'Theo ảnh teaser được leaker @yabhishekhd dẫn lại từ một nguồn nổi tiếng trên Weibo, OPPO Reno7 5G series dự kiến sẽ trình làng tại Trung Quốc vào ngày 25/11, lúc 17 giờ (theo giờ Việt Nam).\r\n\r\nThời gian: Từ 17:00 - 19:00, ngày 25/11\r\nĐịa điểm: Trung Quốc'),
+(4, 3, 'phone4.jpg', 'Oppo thay đổi thiết kế mới sau 6 năm', 'Chắc chắn hơn bao giờ hết nhờ độ bền chuẩn quân đội, laptop Asus Zenbook UX325EA (KG363T) sở hữu kiểu dáng tinh tế cùng hiệu năng tối ưu nhờ CPU Intel thế hệ 11, giúp bạn xử lý nhanh gọn và chính xác mọi tác vụ.', 'Laptop được trang bị chip Intel Core i5 Tiger Lake 1135G7 giúp bạn hoàn thành công việc nhanh chóng, từ các tác vụ văn phòng như word, excel,... đến các công việc sáng tạo, đồ họa khác với tốc độ CPU 2.40 GHz và đạt tối đa đến 4.2 GHz nhờ Turbo Boost.\r\n\r\nĐem đến khả năng xử lý hình ảnh sắc nét lên đến chuẩn 8K nhờ card đồ họa tích hợp Intel Iris Xe Graphics, đáp ứng mọi nhu cầu của người dùng với những trải nghiệm chân thật cùng các tựa game hấp dẫn hay thỏa sức sáng tạo với các ứng dụng đồ họa như Photoshop, Ai, Lightroom,...\r\n\r\nRAM 8 GB LPDDR4X (On board) với tốc độ bus RAM 4267 MHz cho bạn sự đa nhiệm khi có thể mở nhiều ứng dụng cùng lúc và chuyển đổi qua lại một cách mượt mà.'),
+(5, 2, 'laptop1.jpg', 'Ra mắt laptop mà hình OLED công nghệ 6K', 'Phiên bản laptop Asus này được chế tác từ kim loại nguyên khối, sở hữu trọng lượng nhẹ chỉ 1.14 kg và mỏng 13.9 mm, trở thành người bạn đồng hành lý tưởng, cùng đồng hành với bạn trên mọi chuyến đi, phục vụ tốt mọi nhu cầu của bạn.', 'Đàm thoại tốt hơn nhờ công nghệ khử nhiễu âm thanh tích hợp AI với khả năng tách tiếng ồn không mong muốn từ ngoại cảnh ra khỏi giọng nói con người, đem đến âm thanh trong trẻo, nâng cao hiệu suất công việc.\r\n\r\nAsus Zenbook UX325EA (KG363T) là phiên bản laptop mỏng nhẹ, cao cấp, với hiệu năng mạnh mẽ, là sự lựa chọn lí tưởng cho hầu hết tất cả mọi người.'),
+(6, 2, 'laptop2.jpg', '5 cách kiểm tra cấu hình laptop', 'Sẽ có nhiều lúc bạn cần kiểm tra, check lại thông tin về cấu hình chiếc laptop mình đang dùng (mua máy mới, mua máy đã qua sử dụng, kiểm tra để nâng cấp, lắp thiết bị ngoại vi,…). Nhưng bạn không biết xem như thế nào?', 'Có rất nhiều trường hợp chúng ta cần kiểm tra thông tin cấu hình bên trong của laptop nói riêng và máy tính nói chung. Trong các tình huống sau thì bạn rất cần phải check thử:\r\n\r\nKhi mới mua laptop, đặc biệt là khi mua máy cũ để biết thông tin từ người bán có chính xác hay không và kiểm tra chất lượng của máy. Nếu máy có vấn đề thì chúng ta sẽ nắm được để trao đổi lại với người bán, tránh thiệt thòi cho bản thân.\r\nKhi muốn nâng cấp máy lên để dùng các ứng dụng hay game mới hay đơn giản là muốn tăng hiệu suất sử dụng. Biết được thông số hiện tại như thế nào thì việc nâng cấp mới dễ dàng và chính xác.\r\nKhi muốn kiểm tra máy có đang hoạt động tốt không, nhất là khi thấy có dấu hiệu bất thường như giật, lag, chậm khi dùng. Việc này có thể giúp bạn quyết định có nên nâng cấp laptop lên hay không.\r\nNgoài ra, ngay cả khi không có nhu cầu đặc biệt, việc kiểm tra thông tin laptop định kỳ cũng không bao giờ thừa. Xem thông tin giúp người dùng hiểu rõ về chiếc laptop đồng hành mình mỗi ngày trong cả công việc lẫn nhu cầu giải trí. Kiểm tra định kỳ có thể giúp bạn phát hiện sớm các vấn đề cần nâng cấp.'),
+(7, 2, 'laptop3.jpg', 'Cách sử dụng laptop kéo dài tuổi thọ pin', 'Chắc chắn hơn bao giờ hết nhờ độ bền chuẩn quân đội, laptop Asus Zenbook UX325EA (KG363T) sở hữu kiểu dáng tinh tế cùng hiệu năng tối ưu nhờ CPU Intel thế hệ 11, giúp bạn xử lý nhanh gọn và chính xác mọi tác vụ.', 'Laptop được trang bị chip Intel Core i5 Tiger Lake 1135G7 giúp bạn hoàn thành công việc nhanh chóng, từ các tác vụ văn phòng như word, excel,... đến các công việc sáng tạo, đồ họa khác với tốc độ CPU 2.40 GHz và đạt tối đa đến 4.2 GHz nhờ Turbo Boost. Đem đến khả năng xử lý hình ảnh sắc nét lên đến chuẩn 8K nhờ card đồ họa tích hợp Intel Iris Xe Graphics, đáp ứng mọi nhu cầu của người dùng với những trải nghiệm chân thật cùng các tựa game hấp dẫn hay thỏa sức sáng tạo với các ứng dụng đồ họa như Photoshop, Ai, Lightroom,... RAM 8 GB LPDDR4X (On board) với tốc độ bus RAM 4267 MHz cho bạn sự đa nhiệm khi có thể mở nhiều ứng dụng cùng lúc và chuyển đổi qua lại một cách mượt mà.'),
+(8, 2, 'laptop4.jpg', 'ASUS ZenBook OLED UX325 phù hợp cho các bạn trẻ', 'Là máy tính tầm trung – cao cấp nhưng ZenBook UX325 có màn hình OLED tân tiến. Đi kèm với nó là độ phân giải FullHD nhưng đừng vì vậy mà nghĩ rằng nó chưa đủ “tầm” để sánh với màn hình cao cấp.', 'Mẫu Ultrabook này được ASUS đầu tư khá hoàn hảo. Sản phẩm được trang bị con chip Intel Core i5 cùng card đồ hoạ Intel Iris XE, RAM 8GB RAM LPDDR4x bus 4266 MHz chạy Dual Channel và bộ nhớ SSD 512GB m.2 NVMe. Các thông số này tuy không phải đỉnh nhất nhưng lại rất hài hòa khi kết hợp cùng nhau, cho hiệu năng phục vụ tốt các nhu cầu từ giải trí đến làm việc. Đặc biệt là card đồ hoạ Intel Iris XE G7 mạnh gấp 3 lần nếu đặt lên bàn cân so sánh với Intel Ultra HD620 đời cũ. Dung lượng pin laptop là 67Wh.');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_category`
+-- Table structure for table `tbl_category`
 --
 
 CREATE TABLE `tbl_category` (
@@ -77,7 +84,7 @@ CREATE TABLE `tbl_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_category`
+-- Dumping data for table `tbl_category`
 --
 
 INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
@@ -90,7 +97,7 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_danhmuctin`
+-- Table structure for table `tbl_danhmuctin`
 --
 
 CREATE TABLE `tbl_danhmuctin` (
@@ -99,17 +106,17 @@ CREATE TABLE `tbl_danhmuctin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_danhmuctin`
+-- Dumping data for table `tbl_danhmuctin`
 --
 
 INSERT INTO `tbl_danhmuctin` (`danhmuctin_id`, `tendanhmuc`) VALUES
-(2, 'Kiến thức máy tính'),
-(3, 'Kiến thức điện thoại');
+(2, 'Máy tính'),
+(3, 'Điện thoại');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_donhang`
+-- Table structure for table `tbl_donhang`
 --
 
 CREATE TABLE `tbl_donhang` (
@@ -123,49 +130,17 @@ CREATE TABLE `tbl_donhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_donhang`
+-- Dumping data for table `tbl_donhang`
 --
 
 INSERT INTO `tbl_donhang` (`donhang_id`, `sanpham_id`, `khachhang_id`, `soluong`, `mahang`, `ngaythang`, `status_donhang`) VALUES
 (47, 7, 24, 3, '355', '2021-09-06 14:46:30', 0),
-(48, 1, 24, 3, '355', '2021-09-06 14:46:30', 0),
-(49, 20, 24, 3, '68', '2021-10-28 02:11:43', 0),
-(50, 34, 24, 2, '68', '2021-10-28 02:11:43', 0),
-(51, 37, 24, 1, '762', '2021-10-28 02:15:28', 0),
-(52, 27, 24, 1, '762', '2021-10-28 02:15:28', 0),
-(53, 35, 24, 2, '490', '2021-10-28 02:17:46', 2),
-(54, 34, 24, 3, '490', '2021-10-28 02:17:46', 2),
-(55, 28, 26, 1, '8', '2021-11-14 08:55:14', 0),
-(56, 26, 26, 1, '8', '2021-11-14 08:55:14', 0),
-(57, 27, 26, 1, '8', '2021-11-14 08:55:14', 0),
-(58, 37, 26, 2, '8', '2021-11-14 08:55:14', 0),
-(59, 28, 27, 1, '481', '2021-11-14 08:55:24', 0),
-(60, 26, 27, 1, '481', '2021-11-14 08:55:24', 0),
-(61, 27, 27, 1, '481', '2021-11-14 08:55:24', 0),
-(62, 37, 27, 2, '481', '2021-11-14 08:55:24', 0),
-(63, 28, 24, 7, '5854-2021-11-16-10-10-38', '2021-11-16 09:10:38', 0),
-(64, 28, 24, 7, '5170-2021-11-16-10-11-14', '2021-11-16 09:11:14', 0),
-(65, 35, 24, 3, '5170-2021-11-16-10-11-14', '2021-11-16 09:11:14', 0),
-(66, 26, 24, 1, '5170-2021-11-16-10-11-14', '2021-11-16 09:11:14', 0),
-(67, 27, 24, 1, '5170-2021-11-16-10-11-14', '2021-11-16 09:11:14', 0),
-(68, 28, 24, 7, '9300-2021-11-16-10-11-50', '2021-11-16 09:11:50', 0),
-(69, 28, 24, 7, '2145-2021-11-16-10-15-30', '2021-11-16 09:15:30', 0),
-(70, 27, 24, 1, '8891-2021-11-16-10-15-42', '2021-11-16 09:15:42', 0),
-(71, 26, 29, 1, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(72, 35, 29, 3, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(73, 34, 29, 3, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(74, 24, 29, 1, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(75, 23, 29, 1, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(76, 5, 29, 10, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(77, 36, 30, 1, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0),
-(78, 22, 30, 1, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0),
-(79, 21, 30, 3, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0),
-(80, 16, 30, 1, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0);
+(48, 1, 24, 3, '355', '2021-09-06 14:46:30', 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_giaodich`
+-- Table structure for table `tbl_giaodich`
 --
 
 CREATE TABLE `tbl_giaodich` (
@@ -179,7 +154,7 @@ CREATE TABLE `tbl_giaodich` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_giaodich`
+-- Dumping data for table `tbl_giaodich`
 --
 
 INSERT INTO `tbl_giaodich` (`giaodich_id`, `khachhang_id`, `sanpham_id`, `soluong`, `magiaodich`, `ngaythang`, `status_giaodich`) VALUES
@@ -192,44 +167,12 @@ INSERT INTO `tbl_giaodich` (`giaodich_id`, `khachhang_id`, `sanpham_id`, `soluon
 (18, 24, 6, 3, '695', '2021-09-06 13:43:38', 2),
 (19, 24, 3, 3, '695', '2021-09-06 13:43:38', 2),
 (20, 24, 7, 3, '355', '2021-09-06 14:46:30', 0),
-(21, 24, 1, 3, '355', '2021-09-06 14:46:30', 0),
-(22, 24, 20, 3, '68', '2021-10-28 02:11:43', 0),
-(23, 24, 34, 2, '68', '2021-10-28 02:11:43', 0),
-(24, 24, 37, 1, '762', '2021-10-28 02:15:28', 0),
-(25, 24, 27, 1, '762', '2021-10-28 02:15:28', 0),
-(26, 24, 35, 2, '490', '2021-10-28 02:28:37', 2),
-(27, 24, 34, 3, '490', '2021-10-28 02:28:37', 2),
-(28, 26, 28, 1, '8', '2021-11-15 06:33:02', 0),
-(29, 26, 26, 1, '8', '2021-11-15 06:33:02', 0),
-(30, 26, 27, 1, '8', '2021-11-15 06:33:02', 0),
-(31, 26, 37, 2, '8', '2021-11-15 06:33:02', 0),
-(32, 27, 28, 1, '481', '2021-11-14 08:57:37', 2),
-(33, 27, 26, 1, '481', '2021-11-14 08:57:37', 2),
-(34, 27, 27, 1, '481', '2021-11-14 08:57:37', 2),
-(35, 27, 37, 2, '481', '2021-11-14 08:57:37', 2),
-(36, 24, 28, 7, '5854-2021-11-16-10-10-38', '2021-11-16 09:25:36', 2),
-(37, 24, 28, 7, '5170-2021-11-16-10-11-14', '2021-11-16 09:22:15', 2),
-(38, 24, 35, 3, '5170-2021-11-16-10-11-14', '2021-11-16 09:22:15', 2),
-(39, 24, 26, 1, '5170-2021-11-16-10-11-14', '2021-11-16 09:22:15', 2),
-(40, 24, 27, 1, '5170-2021-11-16-10-11-14', '2021-11-16 09:22:15', 2),
-(41, 24, 28, 7, '9300-2021-11-16-10-11-50', '2021-11-16 09:11:50', 0),
-(42, 24, 28, 7, '2145-2021-11-16-10-15-30', '2021-11-16 09:15:30', 0),
-(43, 24, 27, 1, '8891-2021-11-16-10-15-42', '2021-11-16 09:15:42', 0),
-(44, 29, 26, 1, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(45, 29, 35, 3, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(46, 29, 34, 3, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(47, 29, 24, 1, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(48, 29, 23, 1, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(49, 29, 5, 10, '8849-2021-11-16-16-49-50', '2021-11-16 15:49:50', 0),
-(50, 30, 36, 1, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0),
-(51, 30, 22, 1, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0),
-(52, 30, 21, 3, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0),
-(53, 30, 16, 1, '1351-2021-11-22-04-40-47', '2021-11-22 03:40:47', 0);
+(21, 24, 1, 3, '355', '2021-09-06 14:46:30', 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_giohang`
+-- Table structure for table `tbl_giohang`
 --
 
 CREATE TABLE `tbl_giohang` (
@@ -242,18 +185,18 @@ CREATE TABLE `tbl_giohang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_giohang`
+-- Dumping data for table `tbl_giohang`
 --
 
 INSERT INTO `tbl_giohang` (`giohang_id`, `tensanpham`, `sanpham_id`, `giasanpham`, `hinhanh`, `soluong`) VALUES
-(130, 'LG Boom Blast Speaker', 36, '180', 'mm2.jpg', 5),
-(131, 'Moto X4 (6 GB)', 24, '233', 'mk2.jpg', 1),
-(132, 'Điện thoại LG', 16, '8500000', 'dienthoai_lg.jpg', 4);
+(59, 'Tivi LG', 20, '9000000', 'tivi_lg.jpg', 3),
+(60, 'Microwave Oven', 34, '300', 'm9.jpg', 2),
+(61, 'Máy giặt Panasonic', 5, '7000000', 'm8.jpg', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_khachhang`
+-- Table structure for table `tbl_khachhang`
 --
 
 CREATE TABLE `tbl_khachhang` (
@@ -264,29 +207,23 @@ CREATE TABLE `tbl_khachhang` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `giaohang` int(11) NOT NULL DEFAULT 0,
-  `note` text DEFAULT NULL
+  `note` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_khachhang`
+-- Dumping data for table `tbl_khachhang`
 --
 
 INSERT INTO `tbl_khachhang` (`khachhang_id`, `name`, `phone`, `address`, `email`, `password`, `giaohang`, `note`) VALUES
 (21, 'Minh123', '09092889912', 'Ben Tre', 'minh1@123', '202cb962ac59075b964b07152d234b70', 1, 'nhanh'),
 (22, 'Huyền', '0909286629', 'Cần Thơ', 'huyen@123', '202cb962ac59075b964b07152d234b70', 0, 'None'),
 (23, 'Ngân', '0909286688', 'Bến Tre', 'ngan@123', '202cb962ac59075b964b07152d234b70', 0, 'None'),
-(24, 'Hoà123', '12345678', 'Chợ123', 'hoa@123', '202cb962ac59075b964b07152d234b70', 1, 'None'),
-(25, '123asd', '2134', '123', '213@aasd', '202cb962ac59075b964b07152d234b70', 0, NULL),
-(26, 'Nhi', '09090123', '23sd', '123@123', '202cb962ac59075b964b07152d234b70', 1, '2'),
-(28, 'Thanh', '0909188213', 'HCM', 'thanh@gmail.com', '202cb962ac59075b964b07152d234b70', 0, NULL),
-(29, 'Thành', '0909123864', '123c', 'thanh@123', '202cb962ac59075b964b07152d234b70', 0, NULL),
-(30, 'Thảo', '090912823', 'Bến', 'nhi@gmail.com', '202cb962ac59075b964b07152d234b70', 0, NULL),
-(31, 'Quyên', '090912234', 'Bến Tre', 'quyen@gmail.com', '202cb962ac59075b964b07152d234b70', 0, NULL);
+(24, 'Hoà', '12345678', 'Chợ lách', 'hoa@123', '202cb962ac59075b964b07152d234b70', 0, 'None');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_sanpham`
+-- Table structure for table `tbl_sanpham`
 --
 
 CREATE TABLE `tbl_sanpham` (
@@ -304,32 +241,32 @@ CREATE TABLE `tbl_sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_sanpham`
+-- Dumping data for table `tbl_sanpham`
 --
 
 INSERT INTO `tbl_sanpham` (`sanpham_id`, `category_id`, `sanpham_name`, `sanpham_chitiet`, `sanpham_mota`, `sanpham_gia`, `sp_khuyenmai`, `sanpham_active`, `sanpham_hot`, `sanpham_soluong`, `sanpham_image`) VALUES
-(5, 3, 'Máy giặt Panasonic', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem', '7000000', '5900000', 1, 1, 0, 'm8.jpg'),
-(16, 4, 'Điện thoại LG', 'Bền', 'Đẹp', '9000000', '8500000', 0, 0, 11, 'dienthoai_lg.jpg'),
-(21, 4, 'Samsung Galaxy J7', 'dep', 'dep', '6000000', '5600000', 0, 0, 9, 'm1.jpg'),
-(22, 4, 'OPPO A37f', 'dep', 'dep', '6500000', '6000000', 0, 0, 22, 'm2.jpg'),
-(23, 4, 'Infinix Hot S3', 'dep', 'dep', '300', '290', 0, 0, 11, 'mk1.jpg'),
-(24, 4, 'Moto X4 (6 GB)', 'dep', 'dep', '240', '233', 0, 0, 31, 'mk2.jpg'),
+(5, 3, 'Máy giặt Panasonic', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem', 't is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem', '7000000', '5900000', 1, 1, 10, 'm8.jpg'),
+(16, 4, 'Điện thoại LG', 'Bền', 'Đẹp', '9000000', '8500000', 0, 0, 12, 'dienthoai_lg.jpg'),
+(21, 4, 'Samsung Galaxy J7', 'dep', 'dep', '6000000', '5600000', 0, 0, 12, 'm1.jpg'),
+(22, 4, 'OPPO A37f', 'dep', 'dep', '6500000', '6000000', 0, 0, 23, 'm2.jpg'),
+(23, 4, 'Infinix Hot S3', 'dep', 'dep', '300', '290', 0, 0, 12, 'mk1.jpg'),
+(24, 4, 'Moto X4 (6 GB)', 'dep', 'dep', '240', '233', 0, 0, 32, 'mk2.jpg'),
 (25, 4, 'iVooMi i Series', 'dep', 'dep', '260', '249', 0, 0, 12, 'mk3.jpg'),
-(26, 13, 'Dell Vostro Laptop', 'dep', 'dep', '260', '252', 0, 0, 0, 'mk4.jpg'),
-(27, 13, 'Acer Laptop', 'dep', 'dep', '260', '240', 0, 0, 0, 'mk5.jpg'),
-(28, 13, 'Lenovo ', 'dep', 'dep', '320', '300', 0, 0, 0, 'mk6.jpg'),
+(26, 13, 'Dell Vostro Laptop', 'dep', 'dep', '260', '252', 0, 0, 3, 'mk4.jpg'),
+(27, 13, 'Acer Laptop', 'dep', 'dep', '260', '240', 0, 0, 5, 'mk5.jpg'),
+(28, 13, 'Lenovo ', 'dep', 'dep', '320', '300', 0, 0, 7, 'mk6.jpg'),
 (29, 5, 'Sony 80 cm (32 inches)', 'dep', 'dep', '340', '320', 0, 0, 4, 'm4.jpg'),
-(30, 5, 'Artis Speaker', 'dep', 'dep', '399', '349', 0, 1, 2, 'm5.jpg'),
+(30, 5, 'Artis Speaker', 'dep', 'dep', '399', '349', 0, 0, 2, 'm5.jpg'),
 (31, 5, 'Philips Speakers', 'dep', 'dep', '300', '249', 0, 0, 4, 'm6.jpg'),
-(34, 5, 'Microwave Oven', 'dep', 'dep', '300', '280', 0, 0, 1, 'm9.jpg'),
-(35, 5, 'Boat Rockerz Headset', 'dep', 'dep', '320', '350', 0, 0, 0, 'mm1.jpg'),
-(36, 5, 'LG Boom Blast Speaker', 'dep', 'dep', '200', '180', 0, 0, 4, 'mm2.jpg'),
-(37, 14, 'Nikon Camera', 'dep', 'dep', '230', '200', 0, 1, 0, 'mm3.jpg');
+(34, 5, 'Microwave Oven', 'dep', 'dep', '300', '280', 0, 0, 4, 'm9.jpg'),
+(35, 5, 'Boat Rockerz Headset', 'dep', 'dep', '320', '350', 0, 0, 2, 'mm1.jpg'),
+(36, 5, 'LG Boom Blast Speaker', 'dep', 'dep', '200', '180', 0, 0, 5, 'mm2.jpg'),
+(37, 14, 'Nikon Camera', 'dep', 'dep', '230', '200', 0, 0, 5, 'mm3.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_slider`
+-- Table structure for table `tbl_slider`
 --
 
 CREATE TABLE `tbl_slider` (
@@ -340,20 +277,17 @@ CREATE TABLE `tbl_slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_slider`
+-- Dumping data for table `tbl_slider`
 --
 
 INSERT INTO `tbl_slider` (`slider_id`, `slider_image`, `slider_caption`, `slider_active`) VALUES
 (1, 'bg.jpg', 'slider khuyến mãi', 1),
-(2, 'a4.jpg', 'slider 50%', 0),
-(3, 'b2.jpg', '', 1),
-(5, 'b3.jpg', '', 1),
-(8, 'b4.jpg', '', 1);
+(2, 'a4.jpg', 'slider 50%', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbl_views`
+-- Table structure for table `tbl_views`
 --
 
 CREATE TABLE `tbl_views` (
@@ -362,148 +296,148 @@ CREATE TABLE `tbl_views` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tbl_views`
+-- Dumping data for table `tbl_views`
 --
 
 INSERT INTO `tbl_views` (`view_id`, `view`) VALUES
-(1, 769);
+(1, 20);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `tbl_admin`
+-- Indexes for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Chỉ mục cho bảng `tbl_baiviet`
+-- Indexes for table `tbl_baiviet`
 --
 ALTER TABLE `tbl_baiviet`
   ADD PRIMARY KEY (`baiviet_id`);
 
 --
--- Chỉ mục cho bảng `tbl_category`
+-- Indexes for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Chỉ mục cho bảng `tbl_danhmuctin`
+-- Indexes for table `tbl_danhmuctin`
 --
 ALTER TABLE `tbl_danhmuctin`
   ADD PRIMARY KEY (`danhmuctin_id`);
 
 --
--- Chỉ mục cho bảng `tbl_donhang`
+-- Indexes for table `tbl_donhang`
 --
 ALTER TABLE `tbl_donhang`
   ADD PRIMARY KEY (`donhang_id`);
 
 --
--- Chỉ mục cho bảng `tbl_giaodich`
+-- Indexes for table `tbl_giaodich`
 --
 ALTER TABLE `tbl_giaodich`
   ADD PRIMARY KEY (`giaodich_id`);
 
 --
--- Chỉ mục cho bảng `tbl_giohang`
+-- Indexes for table `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
   ADD PRIMARY KEY (`giohang_id`);
 
 --
--- Chỉ mục cho bảng `tbl_khachhang`
+-- Indexes for table `tbl_khachhang`
 --
 ALTER TABLE `tbl_khachhang`
   ADD PRIMARY KEY (`khachhang_id`);
 
 --
--- Chỉ mục cho bảng `tbl_sanpham`
+-- Indexes for table `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
   ADD PRIMARY KEY (`sanpham_id`);
 
 --
--- Chỉ mục cho bảng `tbl_slider`
+-- Indexes for table `tbl_slider`
 --
 ALTER TABLE `tbl_slider`
   ADD PRIMARY KEY (`slider_id`);
 
 --
--- Chỉ mục cho bảng `tbl_views`
+-- Indexes for table `tbl_views`
 --
 ALTER TABLE `tbl_views`
   ADD PRIMARY KEY (`view_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `tbl_admin`
+-- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_baiviet`
+-- AUTO_INCREMENT for table `tbl_baiviet`
 --
 ALTER TABLE `tbl_baiviet`
   MODIFY `baiviet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_category`
+-- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_danhmuctin`
+-- AUTO_INCREMENT for table `tbl_danhmuctin`
 --
 ALTER TABLE `tbl_danhmuctin`
   MODIFY `danhmuctin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_donhang`
+-- AUTO_INCREMENT for table `tbl_donhang`
 --
 ALTER TABLE `tbl_donhang`
-  MODIFY `donhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `donhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_giaodich`
+-- AUTO_INCREMENT for table `tbl_giaodich`
 --
 ALTER TABLE `tbl_giaodich`
-  MODIFY `giaodich_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `giaodich_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_giohang`
+-- AUTO_INCREMENT for table `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
-  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_khachhang`
+-- AUTO_INCREMENT for table `tbl_khachhang`
 --
 ALTER TABLE `tbl_khachhang`
-  MODIFY `khachhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `khachhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_sanpham`
+-- AUTO_INCREMENT for table `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
   MODIFY `sanpham_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_slider`
+-- AUTO_INCREMENT for table `tbl_slider`
 --
 ALTER TABLE `tbl_slider`
-  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `tbl_views`
+-- AUTO_INCREMENT for table `tbl_views`
 --
 ALTER TABLE `tbl_views`
   MODIFY `view_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
