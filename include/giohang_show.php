@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../db/connect.php');
 if(isset($_POST['test1']))
 {
@@ -40,7 +41,7 @@ if(isset($_POST['test1']))
     </tr>
     <tr>
         <td colspan='7'>
-            <button type='submit' name='thanhtoan_cus' class='btn btn-success thanhtoan_giohang' >Thanh toán</button>
+            <button type='submit'  name='thanhtoan_cus' class='btn btn-success thanhtoan_giohang' >Thanh toán</button>
         </td>
     </tr>
     ";

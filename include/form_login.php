@@ -10,8 +10,6 @@
         if($row_dangnhap){
             $_SESSION["login_success"]=$row_dangnhap['name'];
             $_SESSION["cusomer_id"]=$row_dangnhap['khachhang_id'];
-            
-           
         }
         echo "
         <script>

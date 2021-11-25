@@ -1,5 +1,6 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <?php
+
 include('./db/connect.php');
 if(isset($_GET['dangxuat'])){
 	session_destroy();
@@ -80,11 +81,11 @@ if(isset($_POST['thanhtoan_cus']))
 				
                 <?php
                 
-                $sql_lay_giohang=mysqli_query($con,"SELECT * from tbl_giohang ORDER BY giohang_id desc");
-                
+                $sql_lay_giohang=mysqli_query($con,"SELECT Count(*) as total from tbl_giohang ORDER BY giohang_id desc");
+                $data_count_=mysqli_fetch_assoc($sql_lay_giohang);
                 ?>
 				<div class="table-responsive">
-                    <form action="" method="POST">
+                    <form id="form_giohang_12" action="" method="POST" onsubmit="return checkPayment(<?php echo $data_count_['total']  ?>,<?php echo $_SESSION['cusomer_id']  ?>)">
 					<table class="timetable_sub">
 						<thead>
 							<tr>

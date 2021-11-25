@@ -1,5 +1,5 @@
 <?php
-
+			session_start();
            include_once('../db/connect.php');
                         if(isset($_POST['test']))
                         {
@@ -42,15 +42,13 @@
 							<td class='d-flex flex-column'>".$sum."
 							</td>
 							<td class='thanh_toan_minicart' >
-							";
-							if(isset($_SESSION['login_success']))
-							{
-								echo "<a href='?quanly=giohang' onclick='closeCart()' name='themgiohang' class='btn btn-success minicart_btn_pay'>Thanh toán</a>";
-							}else{
-								
-								echo "<input type='button' class='btn btn-success' value='Thanh toán' onclick='openLoginForm()'>";
-							}
-                            "
+							
+							<input onclick='closeCart()' id='check_login_payment' type='button' ";
+							if(isset($_SESSION['login_success'])){
+								echo "id_checkLogin=".$_SESSION['cusomer_id'];}
+							else{echo "id_checkLogin=0";}
+							echo" name='themgiohang' class='btn btn-success minicart_btn_pay' value='Thanh toán'>
+							
 							</td>
 						
 						</tr>";

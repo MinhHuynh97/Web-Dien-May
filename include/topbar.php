@@ -73,7 +73,7 @@ if (isset($_POST['log_out']) && isset($_SESSION["login_success"])) {
 		} ?>
 	</div>
 </nav>
-<div style="margin: 0;" class="row header-bot_inner_wthreeinfo_header_mid">
+<div style="margin: 0;background-color: white" class="row header-bot_inner_wthreeinfo_header_mid">
 	<!-- logo -->
 	<div class="col-md-3 logo_agile d-flex">
 		

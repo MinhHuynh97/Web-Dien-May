@@ -13,7 +13,6 @@
 			?>
           <div class="media-29101">
             <a href="#"><img src="./images/<?php echo $row_slider['slider_image'] ?>" alt="Image" class="img-fluid"></a>
-            
           </div>
 		  <?php
 				}

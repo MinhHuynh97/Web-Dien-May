@@ -353,6 +353,10 @@ button.w3view-cart {
     color: #F45C5D;
 }
 
+.btn-top-bar p{
+    color: wheat;
+}
+
 /*-- navigation-dropdown --*/
 
 .agile_inner_drop_nav_info {

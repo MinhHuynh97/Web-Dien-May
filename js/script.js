@@ -18,6 +18,7 @@ $(document).ready(function(){
     }
     
     
+    
         $(document).on('click','#themmon_ngon',function(){
         var id= $(this).attr('id_mon');
         var img=$('#img_mini').val();
@@ -273,7 +274,7 @@ else{
 
     }
     function openLoginForm(){
-        document.getElementById('id01').style.display='block';
+        document.getElementById('id01')[0].setAttribute("style","display:block");
     }
     function close_modal(){
 
@@ -283,6 +284,31 @@ else{
         document.getElementById('modal_open').setAttribute("style","display:none");
     }
     function closeCart(){
-        document.getElementById('cart_icon').setAttribute("style","display:none");
+        if(document.getElementById('check_login_payment').getAttribute('id_checklogin')==0)
+        {
+            document.getElementById('modal_open').setAttribute("style","display:none");
+            alert("Đăng nhập trước khi thanh toán");
+        }
+        else{
+            setTimeout(window.location="http://localhost:8080/web/index.php?quanly=giohang", 10000)
+            
+        }
     }
+    function checkPayment(a,b){
+        if(a==0)
+        {alert("Hãy chọn thêm đơn hàng");
+        return false;
+        }
+        else if(window.confirm("Bạn sẽ thanh toán đơn hàng này?")==false)
+        {
+            return false;
+        }else{
+            alert ("Thanh toán thànhh công !!" ); 
+            
+            return  true;
+            
+        }
+    }
+    
+    
     
