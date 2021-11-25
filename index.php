@@ -1,79 +1,77 @@
 <?php
-	session_start();
-	include_once('db/connect.php');
-
+session_start();
+include('../db/connect.php');
+?>
+<?php
+    if(isset($_POST['dangnhap']))
+    {
+        $taikhoan=$_POST['taikhoan'];
+        $matkhau=md5($_POST['matkhau']);
+        if($matkhau =='' || $taikhoan=='')
+        {
+            echo '<p>Xin nhập đủ<p>';
+        }
+        else{
+            $sql_select_admin=mysqli_query($con,"SELECT * from tbl_admin where email='$taikhoan' AND password = '$matkhau' limit 1");
+            $row_dangnhap=mysqli_fetch_array($sql_select_admin);
+            $count=mysqli_num_rows($sql_select_admin);  
+            if($count>0){
+                $_SESSION["dangnhap"]=$row_dangnhap['admin_name'];
+               
+                $_SESSION["admin_id"]=$row_dangnhap['admin_id'];
+                header('Location:  dashboard.php' );
+            }else{
+                echo "Tài khoản mật khẩu sai";
+            }
+        }
+    }
 ?>
 
 <!DOCTYPE html>
-<html lang="zxx">
-
 <head>
-	<title>web điện máy</title>
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
-	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="css/fontawesome-all.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- <link rel="stylesheet" href="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="js/script.js"></script>
-	<link rel="stylesheet" href="./css/owl.carousel.min.css">
-	<script src="./js/owl.carousel.min.js"></script>
+<title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Login :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="../css/backend/bootstrap.min.css" >
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link href="../css/backend/style.css" rel='stylesheet' type='text/css' />
+<link href="../css/backend/style-responsive.css" rel="stylesheet"/>
+<!-- font CSS -->
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="../css/backend/font.css" type="text/css"/>
+<link href="../css/backend/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<script src="../js/backend/jquery2.0.3.min.js"></script>
+<style>
+    html{
+        background-color: rgba(171, 119, 157, 0.27);
+    }
+</style>
 </head>
-
 <body>
-	<?php
-	
-	include_once('include/topbar.php');
-	include_once('include/menu.php');
-	if(isset($_GET['quanly']))
-	{
-		$tam=$_GET['quanly'];
-	}
-	else{
+<div class="log-w3">
+<div class="w3layouts-main">
+	<h2>Sign In Now</h2>
+		<form action="" method="post">
+			<input type="text" class="ggg" name="taikhoan" placeholder="Điền email/tên đăng nhập" required="">
+			<input type="password" class="ggg" name="matkhau" placeholder="Điền mật khẩu" required="">
+			<input type="submit" value="Đăng nhập admin" name="dangnhap">
+		</form>
 		
-		$tam='';
-	}
-
-	include_once('include/slider.php');
-	if($tam=='danhmuc'){
-		include_once('include/danhmuc.php');
-	}elseif($tam=='chitietsp'){
-		include_once('include/chitietsp.php');
-	}elseif($tam=='giohang'){
-		include_once('include/giohang.php');
-	}elseif($tam=='timkiem')
-	{
-		include_once('include/timkiem.php');
-	}
-	elseif($tam=='tintuc')
-	{
-		include_once('include/tintuc.php');
-	}
-	elseif($tam=='chitiettin')
-	{
-		include_once('include/chitiettin.php');
-
-	}elseif($tam=='xemdonhang')
-	{
-		include_once('include/xemdonhang.php');
-	}elseif($tam=='lienhe')
-	{
-		include_once('include/contact.php');
-	}
-	else
-	{
-		include_once('include/home.php');
-	}
-	include_once('include/footer.php');
-	
-	?>
-	
-	
+</div>
+</div>
+<script src="../js/backend/bootstrap.js"></script>
+<script src="../js/backend/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../js/backend/scripts.js"></script>
+<script src="../js/backend/jquery.slimscroll.js"></script>
+<script src="../js/backend/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="../js/backend/jquery.scrollTo.js"></script>
 </body>
-
 </html>
