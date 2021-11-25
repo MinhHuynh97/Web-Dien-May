@@ -39,8 +39,8 @@
 												<a href="single.html"><?php echo $row_cate['sanpham_name'] ?></a>
 											</h4>
 											<div class="info-product-price my-2">
-												<span class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ." vnd" ?></span>
-												<del><?php echo number_format($row_cate['sanpham_gia']) ." vnd" ?></del>
+												<span class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ." $" ?></span>
+												<del><?php echo number_format($row_cate['sanpham_gia']) ." $" ?></del>
 											</div>
 											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 											<form action="?quanly=giohang" method="post">

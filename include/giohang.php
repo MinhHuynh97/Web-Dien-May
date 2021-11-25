@@ -95,7 +95,7 @@ if(isset($_POST['thanhtoan_cus']))
 								<th>Tên sản phẩm</th>
 
 								<th>Giá</th>
-								<th>Tổng giá</th>
+								<th>Tổng giá (tính theo $)</th>
 
 								<th>Xoá</th>
 							</tr>

@@ -62,7 +62,7 @@ while($row_chitiet=mysqli_fetch_array($sql_chitiet)){
 					<h3 class="mb-3"><?php echo $row_chitiet['sanpham_name'] ?></h3>
 					<p class="mb-3">
 						<span class="item_price"><?php echo number_format($row_chitiet['sp_khuyenmai']) ." vnd" ?></span>
-						<del class="mx-2 font-weight-light"><?php echo number_format($row_chitiet['sanpham_gia']) ." vnd" ?></del>
+						<del class="mx-2 font-weight-light"><?php echo number_format($row_chitiet['sanpham_gia']) ."$" ?></del>
 						<label>Free delivery</label>
 					</p>
 					

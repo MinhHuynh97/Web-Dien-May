@@ -17,7 +17,7 @@
 							</div>
 							<div class="col-8 text-form-footer">
 								<h3>Miễn phí vận chuyển</h3>
-								<p>đơn hàng trên 1000000 vnd</p>
+								<p>đơn hàng trên 100 $</p>
 							</div>
 						</div>
 					</div>

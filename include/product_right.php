@@ -45,7 +45,7 @@
 							</div>
 							<div class="col-lg-9 col-sm-10 col-9 w3_mvd">
 								<a href="?quanly=chitietsp&id=<?php echo $row_product_hot['sanpham_id'] ?>"><?php echo $row_product_hot['sanpham_name'] ?></a>
-								<p style="color:red" class=" price-mar mt-2"><?php echo number_format($row_product_hot['sanpham_gia']) . "vnd" ?></p>
+								<p style="color:red" class=" price-mar mt-2"><?php echo number_format($row_product_hot['sanpham_gia']) . "$" ?></p>
 							</div>
 						</div>
 					<?php

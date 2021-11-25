@@ -53,8 +53,8 @@
 												<a id="sp_id" value="<?php echo $row_sanpham['sanpham_name'] ?>" href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"><?php echo $row_sanpham['sanpham_name'] ?></a>
 											</h4>
 											<div class="info-product-price my-2">
-												<span id="gia_km" value="<?php echo number_format($row_sanpham['sp_khuyenmai']) ?>" class="item_price"><?php echo number_format($row_sanpham['sp_khuyenmai']) ." đồng" ?></span>
-												<del><?php echo number_format($row_sanpham['sanpham_gia']) ." đồng" ?></del>
+												<span id="gia_km" value="<?php echo number_format($row_sanpham['sp_khuyenmai']) ?>" class="item_price"><?php echo number_format($row_sanpham['sp_khuyenmai']) ." $" ?></span>
+												<del><?php echo number_format($row_sanpham['sanpham_gia']) ." $" ?></del>
 											</div>
 											<input id="themmon_ngon"  id_mon=<?php echo $row_sanpham['sanpham_id'] ?> type="button" name="themgiohang" value="<?php if($row_sanpham['sanpham_soluong']>0){echo "Add to cart"; }else{echo "Sold out";}?>" class="btn <?php if($row_sanpham['sanpham_soluong']>0){echo "btn-success"; }else{echo "btn-primary";} ?>" >
 											
