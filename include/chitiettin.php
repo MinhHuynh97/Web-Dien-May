@@ -45,9 +45,10 @@
                     alt=" ">
             </div>
             <div class="col-lg-12 ">
-
-                <h3 class="my-sm-3 my-2"><?php echo $row_chitiet['tomtat'] ?></h3><br>
-                <h4 class="my-sm-3 my-2"><?php echo $row_chitiet['noidung'] ?></h4><br>
+                <h4>Tóm tắt</h4>
+                <p class="my-sm-3 my-2"><?php echo $row_chitiet['tomtat'] ?></p><br>
+                <h4>Nội dung</h4>
+                <p class="my-sm-3 my-2"><?php echo $row_chitiet['noidung'] ?></p><br>
 
 
             </div>

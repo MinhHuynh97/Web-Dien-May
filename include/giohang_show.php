@@ -15,7 +15,7 @@ if(isset($_POST['test1']))
     <tr class='rem1'>
         <td class='invert'>".$i."</td>
         <td class='invert-image'>
-             <img src=images/".$row_show_giohang['hinhanh']." class='img-responsive'>
+             <img src=images/products/".$row_show_giohang['hinhanh']." class='img-responsive'>
         </td>
         <td class='invert'>
             <input id='soluong_item_giohang' id_slgh=".$row_show_giohang['sanpham_id']." type='number' min='1' value=".$row_show_giohang['soluong'].">
