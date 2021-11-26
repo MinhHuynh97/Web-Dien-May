@@ -25,6 +25,7 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/jquery.snow.js"></script>
 </head>
 
 <body>

@@ -357,6 +357,7 @@ button.w3view-cart {
     color: wheat;
 }
 
+
 /*-- navigation-dropdown --*/
 
 .agile_inner_drop_nav_info {
@@ -1031,7 +1032,7 @@ a.price-mar {
 }
 
 .box-scroll {
-	min-height: 12em;
+	min-height: 22em;
     position: relative;
     overflow: hidden;
 }
@@ -2270,6 +2271,9 @@ div#testimonials h4.m-title {
 	display: inherit;
 }
 
+.product-sec1.product-sec2.px-sm-5.px-3.bot_img {
+    background-image: url('../images/bot_img.jpg');
+}
 /*-- placeholder-color 
 
 ::-webkit-input-placeholder {

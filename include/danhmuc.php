@@ -35,14 +35,7 @@
                             <div class="col-md-4 product-men">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item text-center">
-                                        <img style="<?php if($row_sanpham['category_id']==4){
-												echo "width: 127px;height:159px";
-												
-											}else{
-												echo "width: 100%;height:159px";
-												
-											}
-											  ?>" src="images/products/<?php echo $row_cate['sanpham_image'] ?>" alt="">
+                                        <img style="width:100%;height:100%" src="images/products/<?php echo $row_cate['sanpham_image'] ?>" alt="">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
                                                 <a href="?quanly=chitietsp&id=<?php echo $row_cate['sanpham_id'] ?>"
@@ -57,12 +50,12 @@
                                         </h4>
                                         <div class="info-product-price my-2">
                                             <span
-                                                class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ." vnd" ?></span>
-                                            <del><?php echo number_format($row_cate['sanpham_gia']) ." vnd" ?></del>
+                                                class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ."$" ?></span>
+                                            <del><?php echo number_format($row_cate['sanpham_gia']) ."$" ?></del>
                                         </div>
                                         <input id="themmon_ngon" id_mon=<?php echo $row_cate['sanpham_id'] ?>
                                             type="button" name="themgiohang"
-                                            value="<?php if($row_cate['sanpham_soluong']>0){echo "Add to cart";}else{echo "Sold out";} ?>"
+                                            value="<?php if($row_cate['sanpham_soluong']>0){echo "Mua";}else{echo "Bán hết";} ?>"
                                             class="btn <?php if($row_cate['sanpham_soluong']>0){echo "btn-success";}else{echo "btn-primary";} ?>">
 
                                     </div>
@@ -81,213 +74,7 @@
 				include('product_right.php');
 				?>
 
-            <!-- <div class="col-lg-3 mt-lg-0 mt-4 p-lg-0">
-					<div class="side-bar p-sm-4 p-3">
-						<div class="search-hotel border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Brand</h3>
-							<form action="#" method="post">
-								<input type="search" placeholder="Search Brand..." name="search" required="">
-								<input type="submit" value=" ">
-							</form>
-							<div class="left-side py-2">
-								<ul>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Samsung</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Red Mi</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Apple</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Nexus</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Motorola</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Micromax</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Lenovo</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Oppo</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">Sony</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">LG</span>
-									</li>
-									<li>
-										<input type="checkbox" class="checked">
-										<span class="span">One Plus</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						
-						<div class="left-side border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Ram</h3>
-							<ul>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">Less than 512 MB</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">512 MB - 1 GB</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">1 GB</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">2 GB</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">3 GB</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">5 GB</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">6 GB</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">6 GB & Above</span>
-								</li>
-							</ul>
-						</div>
-						
-						<div class="range border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Price</h3>
-							<div class="w3l-range">
-								<ul>
-									<li>
-										<a href="#">Under $1,000</a>
-									</li>
-									<li class="my-1">
-										<a href="#">$1,000 - $5,000</a>
-									</li>
-									<li>
-										<a href="#">$5,000 - $10,000</a>
-									</li>
-									<li class="my-1">
-										<a href="#">$10,000 - $20,000</a>
-									</li>
-									<li>
-										<a href="#">$20,000 $30,000</a>
-									</li>
-									<li class="mt-1">
-										<a href="#">Over $30,000</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						
-						<div class="left-side border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Discount</h3>
-							<ul>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">5% or More</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">10% or More</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">20% or More</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">30% or More</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">50% or More</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">60% or More</span>
-								</li>
-							</ul>
-						</div>
-						
-						<div class="left-side border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Offers</h3>
-							<ul>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">Exchange Offer</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">No Cost EMI</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">Special Price</span>
-								</li>
-							</ul>
-						</div>
-						
-						
-						<div class="left-side border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">Cash On Delivery</h3>
-							<ul>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">Eligible for Cash On Delivery</span>
-								</li>
-							</ul>
-						</div>
-						
-						<div class="left-side border-bottom py-2">
-							<h3 class="agileits-sear-head mb-3">New Arrivals</h3>
-							<ul>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">Last 30 days</span>
-								</li>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">Last 90 days</span>
-								</li>
-							</ul>
-						</div>
-						<div class="left-side py-2">
-							<h3 class="agileits-sear-head mb-3">Availability</h3>
-							<ul>
-								<li>
-									<input type="checkbox" class="checked">
-									<span class="span">Exclude Out of Stock</span>
-								</li>
-							</ul>
-						</div>
-						
-					</div>
-					
-				</div> -->
+            
         </div>
     </div>
 </div>
@@ -304,6 +91,3 @@
 	}
 	else{include('mini-cart.php');}?>
 
-<!-- //popup modal (for location)-->
-
-<!-- cart-js -->

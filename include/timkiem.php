@@ -27,7 +27,7 @@
 								<div class="col-md-4 product-men">
 									<div class="men-pro-item simpleCart_shelfItem">
 										<div class="men-thumb-item text-center">
-											<img style='width: <?php if($_GET['id']==2) echo "90%" ?>;' src="images/<?php echo $row_cate['sanpham_image'] ?>" alt="">
+											<img style='width:100%;height:100%' src="images/products/<?php echo $row_cate['sanpham_image'] ?>" alt="">
 											<div class="men-cart-pro">
 												<div class="inner-men-cart-pro">
 													<a href="single.html" class="link-product-add-cart">Xem sản phẩm</a>
@@ -39,8 +39,8 @@
 												<a href="single.html"><?php echo $row_cate['sanpham_name'] ?></a>
 											</h4>
 											<div class="info-product-price my-2">
-												<span class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ." vnd" ?></span>
-												<del><?php echo number_format($row_cate['sanpham_gia']) ." vnd" ?></del>
+												<span class="item_price"><?php echo number_format($row_cate['sp_khuyenmai']) ." $" ?></span>
+												<del><?php echo number_format($row_cate['sanpham_gia']) ." $" ?></del>
 											</div>
 											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 											<form action="?quanly=giohang" method="post">

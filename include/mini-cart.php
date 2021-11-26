@@ -24,7 +24,7 @@
 							<tr>
 								<th  class="text-uppercase">Tên sản phẩm</th>
 								<th scope="col" class="text-uppercase">Số lượng</th>
-								<th scope="col" class="text-uppercase">Giá</th>
+								<th scope="col" class="text-uppercase">Giá ($)</th>
 								<th scope="col" class="text-uppercase"></th>
 							</tr>
 						</thead>

@@ -43,7 +43,7 @@
 					?>
                     <div class="row">
                         <div class="col-lg-3 col-sm-2 col-3 left-mar">
-                            <img src="images/<?php echo $row_product_hot['sanpham_image'] ?>" alt="" class="img-fluid">
+                            <img src="images/products/<?php echo $row_product_hot['sanpham_image'] ?>" alt="" class="img-fluid">
                         </div>
                         <div class="col-lg-9 col-sm-10 col-9 w3_mvd">
                             <a
@@ -58,14 +58,13 @@
                 </div>
             </div>
         </div>
-        <div class="f-grid py-2" style="background-color: antiquewhite;">
-            <!-- <img style="width: 100%;" src="./images/zflip.png" alt="">
-			<img style="width: 100%;" src="./images/i13.png" alt=""> -->
-            <img src="./images/ad/ad1.png" alt="">
-            <img src="./images/ad/ad2.png" alt="">
-            <img src="./images/ad/ad3.png" alt="">
-            <img src="./images/ad/ad4.png" alt="">
-            <img src="./images/ad/ad5.jpg" alt="">
+        <div class="f-grid py-2" >
+           
+            <img style="width: 100%;" src="./images/ad/ad1.png" alt="">
+            <img style="width: 100%;"src="./images/ad/ad2.png" alt="">
+            <img style="width: 100%;"src="./images/ad/ad3.png" alt="">
+            <img style="width: 100%;"src="./images/ad/ad4.png" alt="">
+            <img style="width: 100%;"src="./images/ad/ad5.jpg" alt="">
         </div>
         <!-- //best seller -->
     </div>

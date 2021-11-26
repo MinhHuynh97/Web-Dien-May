@@ -51,12 +51,12 @@
                                         <div class="info-product-price my-2">
                                             <span id="gia_km"
                                                 value="<?php echo number_format($row_sanpham['sp_khuyenmai']) ?>"
-                                                class="item_price"><?php echo number_format($row_sanpham['sp_khuyenmai']) ." đồng" ?></span>
-                                            <del><?php echo number_format($row_sanpham['sanpham_gia']) ." đồng" ?></del>
+                                                class="item_price"><?php echo number_format($row_sanpham['sp_khuyenmai']) ." $" ?></span>
+                                            <del><?php echo number_format($row_sanpham['sanpham_gia']) ." $" ?></del>
                                         </div>
                                         <input id="themmon_ngon" id_mon=<?php echo $row_sanpham['sanpham_id'] ?>
                                             type="button" name="themgiohang"
-                                            value="<?php if($row_sanpham['sanpham_soluong']>0){echo "Add to cart"; }else{echo "Sold out";}?>"
+                                            value="<?php if($row_sanpham['sanpham_soluong']>0){echo "Mua"; }else{echo "Bán hết";}?>"
                                             class="btn <?php if($row_sanpham['sanpham_soluong']>0){echo "btn-success"; }else{echo "btn-primary";} ?>">
 
 
@@ -74,10 +74,10 @@
                     </div>
                     <?php } ?>
                     <!-- Hình ảnh -->
-                    <div class="product-sec1 product-sec2 px-sm-5 px-3">
+                    <div class="product-sec1 product-sec2 px-sm-5 px-3 bot_img">
                         <div class="row">
-                            <h3 class="col-md-4 effect-bg">Summer Carnival</h3>
-                            <p class="w3l-nut-middle">Get Extra 10% Off</p>
+                            <h3 class="col-md-4 effect-bg">Merry Christmas 2021</h3>
+                            <p style="color:pink" class="w3l-nut-middle">Get Extra 10% Off</p>
                             <div class="col-md-8 bg-right-nut">
                                 <img src="images/image1.png" alt="">
                             </div>

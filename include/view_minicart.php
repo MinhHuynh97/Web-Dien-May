@@ -19,7 +19,7 @@
 									</div>
 							</td>
 							<td ><input id='change_ql' style='width: 100%;' id_sp=".$row_minicart['sanpham_id']." min='1' max=".$row_minicart['sanpham_soluong']." value=".$row_minicart['soluong']." type='number' value=".$row_minicart['soluong']."></td>
-							<td class='d-flex flex-column'>". $row_minicart['soluong']*$row_minicart['giasanpham']."
+							<td class='d-flex flex-column'>". $row_minicart['soluong']*$row_minicart['giasanpham']."$
 							</td>
 							<td class='delete_item' >
 								<input type='button' id_delete=".$row_minicart['sanpham_id']." class='btn btn-danger delete_minicart_item' value='Delete'>
@@ -39,7 +39,7 @@
 									</div>
 							</td>
 							<td><input style='width: 40px;' type='hidden' value=''></td>
-							<td class='d-flex flex-column'>".$sum."
+							<td class='d-flex flex-column'>".$sum."$
 							</td>
 							<td class='thanh_toan_minicart' >
 							
