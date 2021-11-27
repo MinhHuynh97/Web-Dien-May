@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 25, 2021 at 02:42 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.3.28
+-- Máy chủ: localhost
+-- Thời gian đã tạo: Th10 27, 2021 lúc 09:22 AM
+-- Phiên bản máy phục vụ: 10.4.8-MariaDB
+-- Phiên bản PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bandienmay`
+-- Cơ sở dữ liệu: `bandienmay`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_admin`
+-- Cấu trúc bảng cho bảng `tbl_admin`
 --
 
 CREATE TABLE `tbl_admin` (
@@ -35,7 +36,7 @@ CREATE TABLE `tbl_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_admin`
+-- Đang đổ dữ liệu cho bảng `tbl_admin`
 --
 
 INSERT INTO `tbl_admin` (`admin_id`, `admin_name`, `email`, `password`) VALUES
@@ -46,7 +47,7 @@ INSERT INTO `tbl_admin` (`admin_id`, `admin_name`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_baiviet`
+-- Cấu trúc bảng cho bảng `tbl_baiviet`
 --
 
 CREATE TABLE `tbl_baiviet` (
@@ -59,7 +60,7 @@ CREATE TABLE `tbl_baiviet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_baiviet`
+-- Đang đổ dữ liệu cho bảng `tbl_baiviet`
 --
 
 INSERT INTO `tbl_baiviet` (`baiviet_id`, `danhmuc_id`, `baiviet_image`, `tenbaiviet`, `tomtat`, `noidung`) VALUES
@@ -75,7 +76,7 @@ INSERT INTO `tbl_baiviet` (`baiviet_id`, `danhmuc_id`, `baiviet_image`, `tenbaiv
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_category`
+-- Cấu trúc bảng cho bảng `tbl_category`
 --
 
 CREATE TABLE `tbl_category` (
@@ -84,7 +85,7 @@ CREATE TABLE `tbl_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_category`
+-- Đang đổ dữ liệu cho bảng `tbl_category`
 --
 
 INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
@@ -97,7 +98,7 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_danhmuctin`
+-- Cấu trúc bảng cho bảng `tbl_danhmuctin`
 --
 
 CREATE TABLE `tbl_danhmuctin` (
@@ -106,7 +107,7 @@ CREATE TABLE `tbl_danhmuctin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_danhmuctin`
+-- Đang đổ dữ liệu cho bảng `tbl_danhmuctin`
 --
 
 INSERT INTO `tbl_danhmuctin` (`danhmuctin_id`, `tendanhmuc`) VALUES
@@ -116,7 +117,7 @@ INSERT INTO `tbl_danhmuctin` (`danhmuctin_id`, `tendanhmuc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_donhang`
+-- Cấu trúc bảng cho bảng `tbl_donhang`
 --
 
 CREATE TABLE `tbl_donhang` (
@@ -130,17 +131,32 @@ CREATE TABLE `tbl_donhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_donhang`
+-- Đang đổ dữ liệu cho bảng `tbl_donhang`
 --
 
 INSERT INTO `tbl_donhang` (`donhang_id`, `sanpham_id`, `khachhang_id`, `soluong`, `mahang`, `ngaythang`, `status_donhang`) VALUES
 (47, 7, 24, 3, '355', '2021-09-06 14:46:30', 0),
-(48, 1, 24, 3, '355', '2021-09-06 14:46:30', 0);
+(48, 1, 24, 3, '355', '2021-09-06 14:46:30', 0),
+(49, 41, 24, 22, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(50, 40, 24, 14, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(51, 37, 24, 5, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(52, 43, 24, 1, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(53, 38, 24, 3, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(54, 39, 24, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(55, 42, 24, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(56, 44, 24, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(57, 43, 24, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(58, 45, 24, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(59, 42, 24, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:07:20', 2),
+(60, 39, 24, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:07:20', 2),
+(61, 38, 24, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:07:20', 2),
+(62, 44, 24, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:07:20', 2),
+(63, 43, 24, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:07:20', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_giaodich`
+-- Cấu trúc bảng cho bảng `tbl_giaodich`
 --
 
 CREATE TABLE `tbl_giaodich` (
@@ -154,7 +170,7 @@ CREATE TABLE `tbl_giaodich` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_giaodich`
+-- Đang đổ dữ liệu cho bảng `tbl_giaodich`
 --
 
 INSERT INTO `tbl_giaodich` (`giaodich_id`, `khachhang_id`, `sanpham_id`, `soluong`, `magiaodich`, `ngaythang`, `status_giaodich`) VALUES
@@ -167,12 +183,27 @@ INSERT INTO `tbl_giaodich` (`giaodich_id`, `khachhang_id`, `sanpham_id`, `soluon
 (18, 24, 6, 3, '695', '2021-09-06 13:43:38', 2),
 (19, 24, 3, 3, '695', '2021-09-06 13:43:38', 2),
 (20, 24, 7, 3, '355', '2021-09-06 14:46:30', 0),
-(21, 24, 1, 3, '355', '2021-09-06 14:46:30', 0);
+(21, 24, 1, 3, '355', '2021-09-06 14:46:30', 0),
+(22, 24, 41, 22, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(23, 24, 40, 14, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(24, 24, 37, 5, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(25, 24, 43, 1, '8390-2021-11-27-04-13-38', '2021-11-27 03:13:38', 0),
+(26, 24, 38, 3, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(27, 24, 39, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(28, 24, 42, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(29, 24, 44, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(30, 24, 43, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(31, 24, 45, 1, '6852-2021-11-27-06-25-46', '2021-11-27 05:25:46', 0),
+(32, 24, 42, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:14:44', 2),
+(33, 24, 39, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:14:44', 2),
+(34, 24, 38, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:14:44', 2),
+(35, 24, 44, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:14:44', 2),
+(36, 24, 43, 1, '333-2021-11-27-09-07-20', '2021-11-27 08:14:44', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_giohang`
+-- Cấu trúc bảng cho bảng `tbl_giohang`
 --
 
 CREATE TABLE `tbl_giohang` (
@@ -184,20 +215,10 @@ CREATE TABLE `tbl_giohang` (
   `soluong` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `tbl_giohang`
---
-
-INSERT INTO `tbl_giohang` (`giohang_id`, `tensanpham`, `sanpham_id`, `giasanpham`, `hinhanh`, `soluong`) VALUES
-(59, 'Tivi LG', 20, '9000000', 'tivi_lg.jpg', 3),
-(60, 'Microwave Oven', 34, '300', 'm9.jpg', 2),
-(61, 'Máy giặt Panasonic', 5, '7000000', 'm8.jpg', 1),
-(62, 'YangZing NanoFluton', 41, '200', 'cam5.jpg', 1);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_khachhang`
+-- Cấu trúc bảng cho bảng `tbl_khachhang`
 --
 
 CREATE TABLE `tbl_khachhang` (
@@ -212,7 +233,7 @@ CREATE TABLE `tbl_khachhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_khachhang`
+-- Đang đổ dữ liệu cho bảng `tbl_khachhang`
 --
 
 INSERT INTO `tbl_khachhang` (`khachhang_id`, `name`, `phone`, `address`, `email`, `password`, `giaohang`, `note`) VALUES
@@ -224,7 +245,7 @@ INSERT INTO `tbl_khachhang` (`khachhang_id`, `name`, `phone`, `address`, `email`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_sanpham`
+-- Cấu trúc bảng cho bảng `tbl_sanpham`
 --
 
 CREATE TABLE `tbl_sanpham` (
@@ -242,13 +263,13 @@ CREATE TABLE `tbl_sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_sanpham`
+-- Đang đổ dữ liệu cho bảng `tbl_sanpham`
 --
 
 INSERT INTO `tbl_sanpham` (`sanpham_id`, `category_id`, `sanpham_name`, `sanpham_chitiet`, `sanpham_mota`, `sanpham_gia`, `sp_khuyenmai`, `sanpham_active`, `sanpham_hot`, `sanpham_soluong`, `sanpham_image`) VALUES
-(16, 4, 'Điện thoại LG', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '9000000', '8500000', 1, 0, 12, 'phone1.jpg'),
-(21, 4, 'Samsung Galaxy J7', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '6000000', '5600000', 1, 0, 12, 'phone2.jpg'),
-(22, 4, 'OPPO A37f', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '6500000', '6000000', 1, 0, 23, 'phone3.jpg'),
+(16, 4, 'Điện thoại LG', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '350', '320', 1, 0, 12, 'phone1.jpg'),
+(21, 4, 'Samsung Galaxy J7', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '250', '220', 1, 0, 12, 'phone2.jpg'),
+(22, 4, 'OPPO A37f', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '300', '290', 1, 0, 23, 'phone3.jpg'),
 (23, 4, 'Infinix Hot S3', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '300', '290', 1, 0, 12, 'phone4.jpg'),
 (24, 4, 'Moto X4 (6 GB)', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '240', '233', 1, 0, 32, 'phone5.jpg'),
 (25, 4, 'iVooMi i Series', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '249', 1, 0, 12, 'phone6.jpg'),
@@ -261,16 +282,16 @@ INSERT INTO `tbl_sanpham` (`sanpham_id`, `category_id`, `sanpham_name`, `sanpham
 (34, 5, 'Microwave Oven', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '300', '280', 1, 0, 4, 'tv4.jpg'),
 (35, 5, 'Boat Rockerz Headset', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '320', '350', 1, 0, 2, 'tv5.jpg'),
 (36, 5, 'LG Boom Blast Speaker', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '200', '180', 1, 0, 5, 'tv6.jpg'),
-(37, 14, 'Nikon Camera', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam1.jpg'),
-(38, 14, 'Canon Knight V', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam2.jpg'),
-(39, 14, 'Fujikama X8 Pro', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam3.jpg'),
-(40, 14, 'Canon Flash R759', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam4.jpg'),
-(41, 14, 'YangZing NanoFluton', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam5.jpg'),
-(42, 14, 'Yokozakj M2 Black', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 5, 'cam6.jpg'),
-(43, 13, 'Dell Vostro Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '252', 1, 0, 3, 'lap4.jpg'),
-(44, 13, 'Acer Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '240', 1, 0, 5, 'lap5.jpg'),
-(45, 13, 'Lenovo ', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '320', '300', 1, 0, 7, 'lap6.jpg'),
-(46, 3, 'Máy giặt Panasonic', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm2.jpg'),
+(37, 14, 'Nikon Camera', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 0, 'cam1.jpg'),
+(38, 14, 'Canon Knight V', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 1, 'cam2.jpg'),
+(39, 14, 'Fujikama X8 Pro', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 3, 'cam3.jpg'),
+(40, 14, 'Canon Flash R759', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, -9, 'cam4.jpg'),
+(41, 14, 'YangZing NanoFluton', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, -17, 'cam5.jpg'),
+(42, 14, 'Yokozakj M2 Black', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '230', '200', 1, 0, 3, 'cam6.jpg'),
+(43, 13, 'Dell Vostro Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '252', 1, 0, 0, 'lap4.jpg'),
+(44, 13, 'Acer Laptop', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '260', '240', 1, 0, 3, 'lap5.jpg'),
+(45, 13, 'Lenovo ', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '320', '300', 1, 0, 6, 'lap6.jpg'),
+(46, 3, 'Máy giặt Panasonic', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '320', '300', 1, 1, 10, 'wm2.jpg'),
 (47, 3, 'Máy giặt Samsung', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm3.jpg'),
 (48, 3, 'Máy giặt LG', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm4.jpg'),
 (49, 3, 'Máy giặt AQUA', 'Máy có một hiệu năng hoàn toàn mạnh mẽ đáp ứng tốt nhiều nhu cầu đến từ người dùng và mang trong mình một thiết kế đầy vuông vức, sang trọng.', 'iPhone 12 Pro Max sở hữu diện mạo mới mới với khung viền được vát thẳng và mạnh mẽ như trên iPad Pro 2020', '7000000', '5900000', 1, 1, 10, 'wm1.jpg'),
@@ -280,7 +301,7 @@ INSERT INTO `tbl_sanpham` (`sanpham_id`, `category_id`, `sanpham_name`, `sanpham
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_slider`
+-- Cấu trúc bảng cho bảng `tbl_slider`
 --
 
 CREATE TABLE `tbl_slider` (
@@ -291,7 +312,7 @@ CREATE TABLE `tbl_slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_slider`
+-- Đang đổ dữ liệu cho bảng `tbl_slider`
 --
 
 INSERT INTO `tbl_slider` (`slider_id`, `slider_image`, `slider_caption`, `slider_active`) VALUES
@@ -303,7 +324,7 @@ INSERT INTO `tbl_slider` (`slider_id`, `slider_image`, `slider_caption`, `slider
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_views`
+-- Cấu trúc bảng cho bảng `tbl_views`
 --
 
 CREATE TABLE `tbl_views` (
@@ -312,148 +333,148 @@ CREATE TABLE `tbl_views` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_views`
+-- Đang đổ dữ liệu cho bảng `tbl_views`
 --
 
 INSERT INTO `tbl_views` (`view_id`, `view`) VALUES
 (1, 20);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_admin`
+-- Chỉ mục cho bảng `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indexes for table `tbl_baiviet`
+-- Chỉ mục cho bảng `tbl_baiviet`
 --
 ALTER TABLE `tbl_baiviet`
   ADD PRIMARY KEY (`baiviet_id`);
 
 --
--- Indexes for table `tbl_category`
+-- Chỉ mục cho bảng `tbl_category`
 --
 ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`category_id`);
 
 --
--- Indexes for table `tbl_danhmuctin`
+-- Chỉ mục cho bảng `tbl_danhmuctin`
 --
 ALTER TABLE `tbl_danhmuctin`
   ADD PRIMARY KEY (`danhmuctin_id`);
 
 --
--- Indexes for table `tbl_donhang`
+-- Chỉ mục cho bảng `tbl_donhang`
 --
 ALTER TABLE `tbl_donhang`
   ADD PRIMARY KEY (`donhang_id`);
 
 --
--- Indexes for table `tbl_giaodich`
+-- Chỉ mục cho bảng `tbl_giaodich`
 --
 ALTER TABLE `tbl_giaodich`
   ADD PRIMARY KEY (`giaodich_id`);
 
 --
--- Indexes for table `tbl_giohang`
+-- Chỉ mục cho bảng `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
   ADD PRIMARY KEY (`giohang_id`);
 
 --
--- Indexes for table `tbl_khachhang`
+-- Chỉ mục cho bảng `tbl_khachhang`
 --
 ALTER TABLE `tbl_khachhang`
   ADD PRIMARY KEY (`khachhang_id`);
 
 --
--- Indexes for table `tbl_sanpham`
+-- Chỉ mục cho bảng `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
   ADD PRIMARY KEY (`sanpham_id`);
 
 --
--- Indexes for table `tbl_slider`
+-- Chỉ mục cho bảng `tbl_slider`
 --
 ALTER TABLE `tbl_slider`
   ADD PRIMARY KEY (`slider_id`);
 
 --
--- Indexes for table `tbl_views`
+-- Chỉ mục cho bảng `tbl_views`
 --
 ALTER TABLE `tbl_views`
   ADD PRIMARY KEY (`view_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_admin`
+-- AUTO_INCREMENT cho bảng `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tbl_baiviet`
+-- AUTO_INCREMENT cho bảng `tbl_baiviet`
 --
 ALTER TABLE `tbl_baiviet`
   MODIFY `baiviet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `tbl_category`
+-- AUTO_INCREMENT cho bảng `tbl_category`
 --
 ALTER TABLE `tbl_category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `tbl_danhmuctin`
+-- AUTO_INCREMENT cho bảng `tbl_danhmuctin`
 --
 ALTER TABLE `tbl_danhmuctin`
   MODIFY `danhmuctin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tbl_donhang`
+-- AUTO_INCREMENT cho bảng `tbl_donhang`
 --
 ALTER TABLE `tbl_donhang`
-  MODIFY `donhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `donhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
--- AUTO_INCREMENT for table `tbl_giaodich`
+-- AUTO_INCREMENT cho bảng `tbl_giaodich`
 --
 ALTER TABLE `tbl_giaodich`
-  MODIFY `giaodich_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `giaodich_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT for table `tbl_giohang`
+-- AUTO_INCREMENT cho bảng `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
-  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
--- AUTO_INCREMENT for table `tbl_khachhang`
+-- AUTO_INCREMENT cho bảng `tbl_khachhang`
 --
 ALTER TABLE `tbl_khachhang`
   MODIFY `khachhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `tbl_sanpham`
+-- AUTO_INCREMENT cho bảng `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
   MODIFY `sanpham_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
--- AUTO_INCREMENT for table `tbl_slider`
+-- AUTO_INCREMENT cho bảng `tbl_slider`
 --
 ALTER TABLE `tbl_slider`
   MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `tbl_views`
+-- AUTO_INCREMENT cho bảng `tbl_views`
 --
 ALTER TABLE `tbl_views`
   MODIFY `view_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
