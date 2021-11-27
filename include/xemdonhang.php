@@ -4,8 +4,7 @@
         $magiaodich=$_GET['magiaodich'];
         $status=$_GET['trangthaidon'];
         $sql_update_status_giaodich=mysqli_query($con,"UPDATE tbl_giaodich set status_giaodich='$status' where magiaodich='$magiaodich'");
-        if($sql_update_status_giaodich)
-        {echo "thanh cong";}
+        
         // $sql_update_status_mahang=mysqli_query($con,"UPDATE tbl_donhang set status='$status' where mahang='$magiaodich'");
         
     }
