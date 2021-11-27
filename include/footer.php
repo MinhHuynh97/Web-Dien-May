@@ -1,3 +1,6 @@
+<div class="bg-footer" style="background-color: cornsilk;">
+
+
 <foote class="bg-light text-center text-white">
     <div class="footer-top-first">
         <div class="container py-md-5 py-sm-4 py-3">
@@ -19,7 +22,7 @@
                         </div>
                         <div class="col-8 text-form-footer">
                             <h3>Miễn phí vận chuyển</h3>
-                            <p>đơn hàng trên 1000000 vnd</p>
+                            <p>đơn hàng trên 10$</p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +92,7 @@
     <!-- Section: Social media -->
 </div>
 <!-- Grid container -->
-
+</div>
 <!-- Copyright -->
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
 

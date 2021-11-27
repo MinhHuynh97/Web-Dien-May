@@ -1031,6 +1031,14 @@ a.price-mar {
     position: absolute;
 }
 
+.background_img{
+    background-image: url('../images/bg2.jpg');
+}
+
+.bg-white{
+    background-color: white;
+}
+
 .box-scroll {
 	min-height: 22em;
     position: relative;

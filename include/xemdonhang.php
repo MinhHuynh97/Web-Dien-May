@@ -10,7 +10,7 @@
         
     }
 ?>
-<div class="ads-grid py-sm-5 py-4">
+<div class="ads-grid py-sm-5 py-4 bg-white">
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">Xem đơn hàng</h3>
@@ -99,7 +99,7 @@
                             </table>
                         <div  class="col-lg-12">
                             <p>Chi tiết đơn hàng</p>
-                            <table class="table table-bordered timetable_sub ">
+                            <table class="table table-bordered  ">
                                 
                             <tr>
                                     <th>Thứ tự </th>

@@ -38,7 +38,7 @@ $sql_chitiet=mysqli_query($con,"SELECT * from tbl_sanpham as sp where sanpham_id
 while($row_chitiet=mysqli_fetch_array($sql_chitiet)){
 ?>
 <div class="banner-bootom-w3-agileits py-5">
-    <div class="container py-xl-4 py-lg-2">
+    <div class="container py-xl-4 py-lg-2 ">
         <!-- tittle heading -->
         <!-- <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
 				<span>S</span>ingle

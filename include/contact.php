@@ -1,7 +1,8 @@
+<div class="background_img">
 <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
 				<span>Contact</span>
 			</h3>
-<div class="row" style="margin: 0;">
+<div class="row" style="margin: 0;justify-content: space-evenly;"">
     <div class="col-3">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="./images/avata1.png" alt="Card image cap">
@@ -14,34 +15,25 @@
     </div>
     <div class="col-3">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="./images/Hien.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Võ Văn Hiền</h5>
+                <p class="card-text">Đại học Bách Khoa<br>Khoa Khoa học và Kỹ thuật máy tính <br>MSSV:2020023 <br>Đảm nhận vai trò:Hoàn thiện trang index, trang giỏ hàng, chức năng tìm kiếm, tạo mini-cart, ajax cho minicart và giỏ hàng </p>
+                
             </div>
         </div>
     </div>
     <div class="col-3">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="./images/Thanh.png" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Lê Nam Tiến Thành</h5>
+                <p class="card-text">Đại học Bách Khoa<br>Khoa Khoa học và Kỹ thuật máy tính <br>MSSV:2020088 <br>Đảm nhận vai trò: Slider hình ảnh, trang chi tiết sản phẩm, Login, register và logout, chi tiết tin tức, hiển thị sản phẩm đang bán chạy</p>
+                
             </div>
         </div>
     </div>
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div>
+    
 
 </div>
 <div class="row justify-content-center" style="margin: 0;">
@@ -58,7 +50,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><i class="fas fa-phone"></i></h5>
                             <h6 class="card-subtitle mb-2 text-muted">Phone</h6>
-                            <p class="card-text">Phone Number 1- 953-928-1246 <br>Phone Number 2- 913-221-1224<br>Phone Number 3- 231-221-1254</p>
+                            <p class="card-text">Phone Number 1- <a href="">953-928-1246</a>  <br>Phone Number 2- <a href="">913-221-1224</a> <br>Phone Number 3- <a href="">231-221-1254</a> </p>
                            
                         </div>
                     </div>
@@ -89,3 +81,4 @@
     </div>
 </div>
 
+</div>

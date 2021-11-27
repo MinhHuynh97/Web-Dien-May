@@ -28,7 +28,7 @@
 <!-- //page -->
 
 <!-- about -->
-<div class="welcome py-sm-5 py-4">
+<div class="welcome py-sm-5 py-4 bg-white">
     <div class="container py-xl-4 py-lg-2">
         <!-- tittle heading -->
 
