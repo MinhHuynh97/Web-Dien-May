@@ -37,46 +37,45 @@ include('../db/connect.php');
 <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Login :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
-<link rel="stylesheet" href="../css/backend/bootstrap.min.css" >
-<!-- //bootstrap-css -->
-<!-- Custom CSS -->
-<link href="../css/backend/style.css" rel='stylesheet' type='text/css' />
-<link href="../css/backend/style-responsive.css" rel="stylesheet"/>
-<!-- font CSS -->
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- font-awesome icons -->
-<link rel="stylesheet" href="../css/backend/font.css" type="text/css"/>
-<link href="../css/backend/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons -->
-<script src="../js/backend/jquery2.0.3.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
-    html{
-        background-color: rgba(171, 119, 157, 0.27);
-    }
-</style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+<link rel="stylesheet" href="../css/backend/index.css">
 </head>
-<body>
-<div class="log-w3">
-<div class="w3layouts-main">
-	<h2>Sign In Now</h2>
-		<form action="" method="post">
-			<input type="text" class="ggg" name="taikhoan" placeholder="Điền email/tên đăng nhập" required="">
-			<input type="password" class="ggg" name="matkhau" placeholder="Điền mật khẩu" required="">
-			<input type="submit" value="Đăng nhập admin" name="dangnhap">
-		</form>
-		
-</div>
-</div>
-<script src="../js/backend/bootstrap.js"></script>
-<script src="../js/backend/jquery.dcjqaccordion.2.7.js"></script>
-<script src="../js/backend/scripts.js"></script>
-<script src="../js/backend/jquery.slimscroll.js"></script>
-<script src="../js/backend/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="../js/backend/jquery.scrollTo.js"></script>
-</body>
+<body class="text-center">
+    <main class="form-signin">
+      <form action="#"  method="post">
+        <img class="mb-4" src="../images/logo1_.png" alt="" width="100%" >
+        <h1 class="h3 mb-3 fw-normal">Đăng nhập</h1>
+
+        <div class="form-floating">
+        <label for="floatingInput">Địa chỉ email</label>
+          <input type="email" class="form-control" id="floatingInput" name="taikhoan" placeholder="name@example.com" required>
+          
+        </div>
+        <div class="form-floating">
+            <label for="floatingPassword">Mật khẩu</label>
+          <input type="password" class="form-control" id="floatingPassword" name="matkhau" placeholder="Mật khẩu" required>     
+        </div>
+
+        
+        <button class="w-100 btn btn-lg btn-primary" type="submit" name="dangnhap">Đăng nhập</button>
+        <p class="text-muted mt-2" id="loi_dang_nhap" style="color:red">&nbsp</p>
+        <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
+      </form>
+    </main>
+  </body>
 </html>
