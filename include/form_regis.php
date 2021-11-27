@@ -25,39 +25,42 @@
 ?>
 
 
-<button onclick="document.getElementById('id01').setAttribute('style','display:block;z-index:2')" style="width:auto; font-weight:600">Register</button>
+<button onclick="document.getElementById('id01').setAttribute('style','display:block;z-index:2')"
+    style="width:auto; font-weight:600">Register</button>
 
 <div id="id01" class="modal">
-  
-  <form class="modal-content animate"  method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <h3>Form đăng nhập</h3>
-    </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+    <form class="modal-content animate" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <h3>Form đăng ký</h3>
+        </div>
 
-      <label for="phone"><b>Phone</b></label>
-      <input type="text" placeholder="Enter phone" name="phone" >
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label for="email"><b>Email</b></label>
-      <input class="email_form_input" style="border: 1px solid #ccc;" type="email" placeholder="Enter email" name="email" required>
+            <label for="phone"><b>Phone</b></label>
+            <input type="text" placeholder="Enter phone" name="phone">
 
-      <label for="address"><b>Address</b></label>
-      <input type="text" placeholder="Enter address" name="address" required>
+            <label for="email"><b>Email</b></label>
+            <input class="email_form_input" style="border: 1px solid #ccc;" type="email" placeholder="Enter email"
+                name="email" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="address"><b>Address</b></label>
+            <input type="text" placeholder="Enter address" name="address" required>
 
-    
-      <button style="width: 100%;" name="dangky_form" type="submit" class="btn btn-success">Register</button>
-      
-    </div>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
 
-    
-  </form>
+
+            <button style="width: 100%;" name="dangky_form" type="submit" class="btn btn-success">Register</button>
+
+        </div>
+
+
+    </form>
 </div>
 
 <script>
@@ -71,7 +74,3 @@ window.onclick = function(event) {
     }
 }
 </script>
-
-
-
-
