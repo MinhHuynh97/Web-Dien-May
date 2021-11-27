@@ -1,6 +1,13 @@
 <?php
+include('./db/connect.php');
 if (isset($_POST['log_out']) && isset($_SESSION["login_success"])) {
 	try {
+		$delete_giohang_=mysqli_query($con,"SELECT * from tbl_giohang");
+		while($row_dele_giohang=mysqli_fetch_array($delete_giohang_))
+		{
+			$id_sp_gh=$row_dele_giohang['giohang_id'];
+			mysqli_query($con,"DELETE from tbl_giohang where giohang_id=$id_sp_gh");
+		}
 		session_destroy();
 	} catch (Exception $e) {
 		echo "loi";
