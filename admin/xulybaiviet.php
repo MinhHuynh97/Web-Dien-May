@@ -24,7 +24,7 @@ include_once('../db/connect.php');
         
         $danhmuc=$_POST['danhmuctin'];
 
-        $path='../uploads/';
+        $path='../images/news/';
         $sql_insert_baiviet=mysqli_query($con,"INSERT INTO tbl_baiviet(tenbaiviet,tomtat,noidung,baiviet_image,danhmuc_id) 
         values ('$tenbaiviet','$chitiet','$mota','$hinhanh','$danhmuc')");
         move_uploaded_file($hinhanh_tmp,$path.$hinhanh);
@@ -51,7 +51,7 @@ include_once('../db/connect.php');
         
         $danhmuc=$_POST['danhmuc'];
         
-        $path='../uploads/';
+        $path='../images/news/';
         if($hinhanh=='')
         {
             $sql_update_sanpham="UPDATE tbl_baiviet SET tenbaiviet='$tenbaiviet',tomtat='$chitiet',noidung='$mota',danhmuc_id='$danhmuc' WHERE baiviet_id='$id_sanpham_update' "; 
@@ -129,7 +129,7 @@ include_once('../db/connect.php');
                     
                     <label for="">Hình ảnh</label>
                     <input type="file" name="hinhanh" class="form-control">
-                    <img src="../uploads/<?php echo $row_sua_sanpham['baiviet_image']?>" height="80" width="80"><br>
+                    <img src="../images/news/<?php echo $row_sua_sanpham['baiviet_image']?>" height="80" width="80"><br>
                     <label for="">Chi tiết</label>
                     <textarea rows="10" name="chitiet" class="form-control" ><?php echo $row_sua_sanpham['tomtat']  ?></textarea>
                     <label for="">Mô tả</label>
@@ -227,7 +227,7 @@ include_once('../db/connect.php');
                         <td><?php echo $row_view['tenbaiviet'] ?></td>
                        
 
-                        <td><img style="width: 100px; height:50;" src="../uploads/<?php echo $row_view['baiviet_image'] ?>" alt="chưa load"> </td>
+                        <td><img style="width: 100px; height:50;" src="../images/news/<?php echo $row_view['baiviet_image'] ?>" alt="chưa load"> </td>
                         
                         <td><?php echo $row_view['tendanhmuc'] ?></td>
                         <td>

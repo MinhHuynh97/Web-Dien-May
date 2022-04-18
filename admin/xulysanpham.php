@@ -28,7 +28,7 @@ include_once('../db/connect.php');
         
         $danhmuc=$_POST['danhmuc'];
         $soluong=$_POST['soluong'];
-        $path='../uploads/';
+        $path='../images/products/';
         $sql_insert_sanpham=mysqli_query($con,"INSERT INTO tbl_sanpham(sanpham_name,sanpham_chitiet,sanpham_mota,sanpham_image,sanpham_gia,sp_khuyenmai,category_id,sanpham_soluong) 
         values ('$tensanpham','$chitiet','$mota','$hinhanh','$giasanpham','$giakhuyenmai','$danhmuc','$soluong')");
         move_uploaded_file($hinhanh_tmp,$path.$hinhanh);
@@ -140,7 +140,7 @@ include_once('../db/connect.php');
                     
                     <label for="">Hình ảnh</label>
                     <input type="file" value="12" name="hinhanh" class="form-control">
-                    <img style="margin-top: 4px;" src="../uploads/<?php echo $row_sua_sanpham['sanpham_image']?>" height="80" width="80"><br>
+                    <img style="margin-top: 4px;" src="../images/products/<?php echo $row_sua_sanpham['sanpham_image']?>" height="80" width="80"><br>
                     <label for="">Gía sản phẩm</label>
                     <input type="text" value="<?php echo $row_sua_sanpham['sanpham_gia']  ?>" class="form-control" name="giasanpham">
                     <label for="">Gía khuyến mãi</label>
